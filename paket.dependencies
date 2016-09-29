@@ -1,0 +1,11 @@
+source https://nuget.org/api/v2
+framework >= net45
+
+nuget FSharp.Core redirects: force
+
+nuget FAKE
+
+nuget FsCheck.Xunit
+nuget FsUnit.xUnit
+nuget xunit.runner.console
+nuget xunit.runner.visualstudio
