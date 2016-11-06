@@ -6,5 +6,6 @@ open global.Xunit
 [<Theory>]
 [<InlineData(1, "1")>]
 [<InlineData(2, "2")>]
+[<InlineData(3, "Fizz")>]
 let ``Given number returns expected label`` inputNumber expectedLabel =
     FizzBuzz inputNumber |> should equal expectedLabel
