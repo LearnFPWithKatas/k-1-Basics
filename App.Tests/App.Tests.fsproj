@@ -50,6 +50,7 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
+    <Compile Include="FizzBuzz.Tests.fs" />
     <Content Include="App.config" />
     <Content Include="paket.references" />
     <Compile Include="App.Tests.fs" />
