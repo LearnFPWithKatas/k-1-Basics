@@ -3,8 +3,8 @@
 open FsUnit.Xunit
 open global.Xunit
 
-[<Fact>]
-let ``Number 1 returns string 1`` () = FizzBuzz 1 |> should equal "1"
-
-[<Fact>]
-let ``Number 2 returns string 2`` () = FizzBuzz 2 |> should equal "2"
+[<Theory>]
+[<InlineData(1, "1")>]
+[<InlineData(2, "2")>]
+let ``Given number returns expected label`` inputNumber expectedLabel =
+    FizzBuzz inputNumber |> should equal expectedLabel
