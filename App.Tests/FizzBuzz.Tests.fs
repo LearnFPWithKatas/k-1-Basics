@@ -8,5 +8,7 @@ open global.Xunit
 [<InlineData(2, "2")>]
 [<InlineData(3, "Fizz")>]
 [<InlineData(5, "Buzz")>]
+[<InlineData(6, "Fizz")>]
+[<InlineData(10, "Buzz")>]
 let ``Given number returns expected label`` inputNumber expectedLabel =
     FizzBuzz inputNumber |> should equal expectedLabel
