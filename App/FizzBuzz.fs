@@ -7,10 +7,12 @@ let FizzBuzzWithPipeline ruleFactor ruleLabel data =
         (number, newLabel)
     else data
 
+let ConvertToLabel(number, label) = 
+    if label <> "" then label
+    else number.ToString()
+
 let FizzBuzz number = 
     (number, "")
     |> FizzBuzzWithPipeline 3 "Fizz"
     |> FizzBuzzWithPipeline 5 "Buzz"
-    |> fun (n, l) -> 
-        if l <> "" then l
-        else n.ToString()
+    |> ConvertToLabel
