@@ -2,14 +2,16 @@
 
 let FizzBuzzWithPipeline ruleFactor ruleLabel data = 
     let number, label = data
-    if number % ruleFactor = 0 then 
+    match number with
+    | n when n % ruleFactor = 0 -> 
         let newLabel = label + ruleLabel
         (number, newLabel)
-    else data
+    | _ -> data
 
 let ConvertToLabel(number, label) = 
-    if label <> "" then label
-    else number.ToString()
+    match label with
+    | l when l <> "" -> l
+    | _ -> number.ToString()
 
 let FizzBuzz number = 
     (number, "")
